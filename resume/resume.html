@@ -2,11 +2,150 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kavyasree Resume</title>
+    <title>Resume | Kavyasree S</title>
+
+    <!-- ===============================
+         INTERNAL CSS
+         =============================== -->
+    <style>
+        body {
+            margin: 0;
+            font-family: "Segoe UI", sans-serif;
+            background: linear-gradient(135deg, #000000, #1a0f00);
+            color: #f5f5f5;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 30px;
+        }
+
+        h1 {
+            color: orange;
+            text-align: center;
+            letter-spacing: 4px;
+            text-shadow: 0 0 10px rgba(255,165,0,0.6);
+        }
+
+        h2 {
+            color: orange;
+            border-bottom: 2px solid orange;
+            padding-bottom: 5px;
+        }
+
+        .section {
+            background-color: #111;
+            padding: 20px;
+            margin: 25px 0;
+            border-left: 6px solid orange;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(255,140,0,0.2);
+        }
+
+        ul {
+            list-style-type: square;
+        }
+
+        /* ===============================
+           EXTERNAL CSS (SIMULATED)
+           In real case this goes in style.css
+           =============================== */
+        .highlight {
+            color: orange;
+            font-weight: bold;
+        }
+
+        .tag {
+            display: inline-block;
+            background-color: orange;
+            color: black;
+            padding: 4px 10px;
+            border-radius: 20px;
+            margin: 5px;
+            font-size: 14px;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Resume <br> Kavyasree S</h1>
+
+<div class="container">
+
+    <!-- ===============================
+         INLINE CSS
+         =============================== -->
+    <h1 style="font-size:42px;">KAVYASREE S</h1>
+
+    <p style="text-align:center; font-size:16px;">
+        📧 <span class="highlight">kavyasreesreevani@gmail.com</span> |
+        📞 <span class="highlight">+91 9003963200</span> |
+        📍 Coimbatore, Tamil Nadu
+    </p>
+
+    <div class="section">
+        <h2>Professional Summary</h2>
+        <p>
+            Motivated <span class="highlight">Computer Science and Engineering</span> student
+            with strong academic foundation and growing expertise in modern software development.
+            Passionate about learning new technologies and building impactful solutions.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Education</h2>
+        <p>
+            <b>Bachelor of Engineering – CSE</b><br>
+            PSG Institute of Technology and Applied Research<br>
+            Expected Graduation: Jan 2027 | CGPA: <span class="highlight">8.43</span>
+        </p>
+        <p>
+            <b>High School – Computer Science</b><br>
+            GRG Matriculation Higher Secondary School<br>
+            Graduated: 2023 | <span class="highlight">93%</span>
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Technical Skills</h2>
+        <div class="tag">Python</div>
+        <div class="tag">Java</div>
+        <div class="tag">C</div>
+        <div class="tag">HTML</div>
+        <div class="tag">CSS</div>
+        <div class="tag">MySQL</div>
+        <div class="tag">PostgreSQL</div>
+    </div>
+
+    <div class="section">
+        <h2>Projects</h2>
+        <p>
+            <b>Air Quality Prediction & Monitoring System</b><br>
+            Built an ML-based system using Python, Flask and XGBoost achieving
+            R² = 0.89 for PM2.5 and PM10 prediction.
+        </p>
+
+        <p>
+            <b>MultiFake – Multimodal Fake News Detection</b><br>
+            Achieved 91.3% accuracy using DistilBERT and ResNet-18 with multimodal fusion.
+        </p>
+
+        <p>
+            <b>Alert Mate – Gender Safety Application</b><br>
+            Android application with SOS alerts, GPS tracking and emergency notifications.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Leadership & Activities</h2>
+        <ul>
+            <li>Joint Secretary – Cooking Club (PSG iTech)</li>
+            <li>NCC Cadet – A & B Certificate Holder</li>
+            <li>Rotaract Club Member – Community Service</li>
+        </ul>
+    </div>
+
+</div>
 
 </body>
 </html>
