@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <title>Resume | Kavyasree S</title>
 
-    <!-- ===============================
+    <!-- Responsive Meta Tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- =========================
          INTERNAL CSS
-         =============================== -->
+         ========================= -->
     <style>
         body {
             margin: 0;
@@ -16,16 +19,20 @@
         }
 
         .container {
-            width: 80%;
+            width: 85%;
             margin: auto;
             padding: 30px;
         }
 
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
         h1 {
             color: orange;
-            text-align: center;
             letter-spacing: 4px;
-            text-shadow: 0 0 10px rgba(255,165,0,0.6);
+            text-shadow: 0 0 12px rgba(255,165,0,0.7);
         }
 
         h2 {
@@ -34,36 +41,79 @@
             padding-bottom: 5px;
         }
 
-        .section {
+        section {
             background-color: #111;
             padding: 20px;
             margin: 25px 0;
             border-left: 6px solid orange;
-            border-radius: 8px;
-            box-shadow: 0 0 15px rgba(255,140,0,0.2);
+            border-radius: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            animation: fadeIn 1s ease-in;
+        }
+
+        section:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 20px rgba(255,140,0,0.6);
         }
 
         ul {
             list-style-type: square;
         }
 
-        /* ===============================
-           EXTERNAL CSS (SIMULATED)
-           In real case this goes in style.css
-           =============================== */
-        .highlight {
-            color: orange;
-            font-weight: bold;
+        .contact {
+            font-size: 15px;
         }
 
+        /* Skill Bars */
+        .skill {
+            margin: 10px 0;
+        }
+
+        .bar {
+            background: #333;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .fill {
+            height: 12px;
+            background: orange;
+        }
+
+        /* Tags */
         .tag {
             display: inline-block;
-            background-color: orange;
+            background: orange;
             color: black;
-            padding: 4px 10px;
+            padding: 6px 12px;
             border-radius: 20px;
             margin: 5px;
             font-size: 14px;
+            font-weight: bold;
+        }
+
+        /* Button */
+        .download {
+            display: inline-block;
+            margin-top: 15px;
+            background: orange;
+            color: black;
+            padding: 10px 18px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 14px;
+            color: #ccc;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
     </style>
 </head>
@@ -72,78 +122,106 @@
 
 <div class="container">
 
-    <!-- ===============================
-         INLINE CSS
-         =============================== -->
-    <h1 style="font-size:42px;">KAVYASREE S</h1>
-
-    <p style="text-align:center; font-size:16px;">
-        📧 <span class="highlight">kavyasreesreevani@gmail.com</span> |
-        📞 <span class="highlight">+91 9003963200</span> |
-        📍 Coimbatore, Tamil Nadu
-    </p>
-
-    <div class="section">
-        <h2>Professional Summary</h2>
-        <p>
-            Motivated <span class="highlight">Computer Science and Engineering</span> student
-            with strong academic foundation and growing expertise in modern software development.
-            Passionate about learning new technologies and building impactful solutions.
+    <header>
+        <!-- INLINE CSS -->
+        <h1 style="font-size:42px;">KAVYASREE S</h1>
+        <p class="contact">
+            📧 kavyasreesreevani@gmail.com |
+            📞 +91 9003963200 |
+            📍 Coimbatore, Tamil Nadu
         </p>
-    </div>
+    </header>
 
-    <div class="section">
-        <h2>Education</h2>
+    <section>
+        <h2>👩‍💻 Professional Summary</h2>
         <p>
-            <b>Bachelor of Engineering – CSE</b><br>
+            Motivated Computer Science and Engineering student with a strong academic
+            foundation and growing expertise in modern software development.
+            Passionate about learning new technologies, problem-solving, and building
+            impactful engineering solutions.
+        </p>
+    </section>
+
+    <section>
+        <h2>🎓 Education</h2>
+        <p>
+            <b>B.E – Computer Science and Engineering</b><br>
             PSG Institute of Technology and Applied Research<br>
-            Expected Graduation: Jan 2027 | CGPA: <span class="highlight">8.43</span>
+            Expected Graduation: Jan 2027 | CGPA: 8.43
         </p>
         <p>
             <b>High School – Computer Science</b><br>
             GRG Matriculation Higher Secondary School<br>
-            Graduated: 2023 | <span class="highlight">93%</span>
+            Graduated: 2023 | 93%
         </p>
-    </div>
+    </section>
 
-    <div class="section">
-        <h2>Technical Skills</h2>
-        <div class="tag">Python</div>
-        <div class="tag">Java</div>
-        <div class="tag">C</div>
-        <div class="tag">HTML</div>
-        <div class="tag">CSS</div>
-        <div class="tag">MySQL</div>
-        <div class="tag">PostgreSQL</div>
-    </div>
+    <section>
+        <h2>💻 Technical Skills</h2>
 
-    <div class="section">
-        <h2>Projects</h2>
+        <div class="skill">Python</div>
+        <div class="bar"><div class="fill" style="width:70%"></div></div>
+
+        <div class="skill">Java</div>
+        <div class="bar"><div class="fill" style="width:60%"></div></div>
+
+        <div class="skill">HTML & CSS</div>
+        <div class="bar"><div class="fill" style="width:80%"></div></div>
+
+        <div class="skill">SQL / PostgreSQL</div>
+        <div class="bar"><div class="fill" style="width:65%"></div></div>
+    </section>
+
+    <section>
+        <h2>🚀 Projects</h2>
         <p>
-            <b>Air Quality Prediction & Monitoring System</b><br>
-            Built an ML-based system using Python, Flask and XGBoost achieving
-            R² = 0.89 for PM2.5 and PM10 prediction.
+            <b>Air Quality Prediction and Monitoring System</b><br>
+            Built a machine learning-based system using Python, Flask, XGBoost and APIs,
+            achieving R² = 0.89 for PM2.5 and PM10 prediction.
         </p>
-
         <p>
             <b>MultiFake – Multimodal Fake News Detection</b><br>
-            Achieved 91.3% accuracy using DistilBERT and ResNet-18 with multimodal fusion.
+            Achieved 91.3% accuracy using DistilBERT, ResNet-18 and cross-modal attention.
         </p>
-
         <p>
             <b>Alert Mate – Gender Safety Application</b><br>
-            Android application with SOS alerts, GPS tracking and emergency notifications.
+            Developed an Android safety app with SOS alerts and real-time GPS tracking.
         </p>
-    </div>
+    </section>
 
-    <div class="section">
-        <h2>Leadership & Activities</h2>
+    <section>
+        <h2>📜 Certifications & Internships</h2>
+        <ul>
+            <li>AI, ML & IoT-based Web Applications – Gustovalley Technovation</li>
+            <li>Caterpillar Tech Challenge 2025 – Semi Finalist</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>🏆 Leadership & Activities</h2>
         <ul>
             <li>Joint Secretary – Cooking Club (PSG iTech)</li>
             <li>NCC Cadet – A & B Certificate Holder</li>
             <li>Rotaract Club Member – Community Service</li>
         </ul>
-    </div>
+    </section>
+
+    <section>
+        <h2>🎯 Areas of Interest</h2>
+        <span class="tag">AI / ML</span>
+        <span class="tag">Data Science</span>
+        <span class="tag">Game Development</span>
+        <span class="tag">Networking</span>
+    </section>
+
+    <section>
+        <h2>📄 Resume</h2>
+        <a href="#" class="download">Download Resume (PDF)</a>
+    </section>
+
+    <footer>
+        © 2026 Kavyasree S | Resume Web Page | HTML & CSS
+    </footer>
 
 </div>
 
